@@ -16,7 +16,7 @@ a 10
 
 // НЕРАБОЧИЙ НАДО ДОПИЛИВАТЬ!!!
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Task001_5 {
     public static void main(String[] arg) {
