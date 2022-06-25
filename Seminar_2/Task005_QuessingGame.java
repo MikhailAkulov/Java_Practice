@@ -13,8 +13,6 @@ public class Task005_QuessingGame {
         int answer = random.nextInt(1, 100); // задаем случайное число в диапазоне от 1 до 100
         int tryCount = 0; // счетчик попыток
         int maxTryCount = 3; // максимально допустимое количестов попыток
-        boolean flag = false; // угадано или нет
-
         System.out.println(
                 "Это игра 'Угадайка'!\nПопробуйте угадать число от 1 до 100. У Вас есть 3 попытки.\n");
 
