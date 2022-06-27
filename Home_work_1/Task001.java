@@ -1,5 +1,3 @@
-package Home_work_1;
-
 // Задача 1. Написать программу вычисления n-ого треугольного числа.
 
 import java.util.Scanner;
