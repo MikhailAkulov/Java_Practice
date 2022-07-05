@@ -2,7 +2,7 @@
 
 // НАДО ДОПИСЫВАТЬ!!!
 
-package Seminar_3;
+/*package Seminar_3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -32,3 +32,4 @@ public class Task002 {
         if (array[0] == 0 && array[1] == 0 && )
     }
 }
+*/
