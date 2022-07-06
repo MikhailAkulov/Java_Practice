@@ -15,20 +15,20 @@ public class Task001_1 {
         }
         int indexToFind = 3;
 
-        System.out.println("Массив заполненный случайными числами:");
+        System.out.println("\nМассив случайных чисел:");
+        for (int el : arr) {
+            System.out.print(el + " ");
+        }
+
+        Arrays.sort(arr);
+        System.out.println("\nОтсортированный вид массива:");
         for (int el : arr) {
             System.out.print(el + " ");
         }
 
         int toFind = arr[indexToFind];
         System.out.println("\nИскомое число: " + toFind);
-
-        Arrays.sort(arr);
-        System.out.println("Отсортированный массив:");
-        for (int el : arr) {
-            System.out.print(el + " ");
-        }
-
+        
         int min = 0;
         int max = arr.length - 1;
         int index = 1;
