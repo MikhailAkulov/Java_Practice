@@ -5,15 +5,21 @@ package Home_work_2;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Task001_1 {
     public static void main(String[] args) {
-        int n = 10;
+
+        Scanner Scanner = new Scanner(System.in);
+        System.out.print("\nУкажите количество элементов массива: ");
+        int n = Scanner.nextInt();
         int[] arr = new int[n];
+        Scanner.close();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = new Random().nextInt(100);
         }
-        int indexToFind = 3;
+
+        int indexToFind = new Random().nextInt(n);
 
         System.out.println("\nМассив случайных чисел:");
         for (int el : arr) {
@@ -28,28 +34,30 @@ public class Task001_1 {
 
         int toFind = arr[indexToFind];
         System.out.println("\nИскомое число: " + toFind);
-        
-        int min = 0;
-        int max = arr.length - 1;
-        int index = 1;
-        if (arr[min] == toFind) {
-            indexToFind = min;
-        } else if (arr[max] == toFind) {
-            indexToFind = max;
-        } else {
-            while (arr[indexToFind] != toFind) {
-                if (toFind > arr[indexToFind]) {
-                    min = indexToFind;
-                    indexToFind = (max + indexToFind) / 2;
-                } else {
-                    max = indexToFind;
-                    indexToFind = (min + indexToFind) / 2;
-                }
-                index++;
-            }
-        }
-        System.out.printf("\nИскомое значение %d находится на %d индексе.\nПотребовалось %d итераций", toFind, indexToFind, index);
 
+        System.out.println("-------------------------------------------------------------------");
+
+        System.out.printf("Индекс искомого числа: %d", indexToFind);
+
+        System.out.println("\nМинимальное колличество попыток для нахождения загаданного числа: "
+                + BinarySearch(arr, indexToFind, 1, n));
     }
-    
+
+    public static int BinarySearch(int[] arr, int key, int low, int high) { // метод бинарного поиска
+
+        int count = 0;
+        while (low <= high) {
+            int mid = low + ((high - low) / 2);
+            if (arr[mid] < key) {
+                low = mid + 1;
+            } else if (arr[mid] > key) {
+                high = mid - 1;
+            } else if (arr[mid] == key) {
+                break;
+            }
+            count += 1;
+        }
+        return count;
+    }
+
 }
