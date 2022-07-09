@@ -45,7 +45,7 @@ public class Task001_1 {
 
     public static int BinarySearch(int[] arr, int key, int low, int high) { // метод бинарного поиска
 
-        int count = 0;
+        int count = 1;
         while (low <= high) {
             int mid = low + ((high - low) / 2);
             if (arr[mid] < key) {
