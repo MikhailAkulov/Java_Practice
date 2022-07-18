@@ -12,34 +12,34 @@ import java.util.Scanner;
 public class Task002_1 {
     public static void main(String[] args) throws InterruptedException {
         int count = 6;
-        Auth(count);
+        Authorization(count);
     }
 
-    public static void Auth(int n) throws InterruptedException {
+    public static void Authorization(int n) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         try {
-            System.out.println("Login: ");
+            System.out.println("Введите Login: ");
             String lCheck = sc.nextLine();
             String login = "admin";
-            System.out.println("Password: ");
+            System.out.println("Введите пароль: ");
             String pCheck = sc.nextLine();
-            String pass = "12345";
+            String pass = "00001111";
             if (lCheck.equals(login) && pCheck.equals(pass)) {
-                System.out.println("You are logged in successfully");
+                System.out.println("Успешный вход");
             } else {
-                throw new IOException("Login or password doesn't exist");
+                throw new IOException("Неправильный логин или пароль");
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
             if (n == 4) {
-                System.out.println("Too many requests, wait for 15 seconds");
+                System.out.println("Много ошибочных вводов, подождте 15 секунд");
                 Thread.sleep(15000);
             }
             if (n == 1) {
-                System.out.println("System is blocked!");
+                System.out.println("Попытки закончились. Выход из системы");
                 return;
             }
-            Auth(n-1);
+            Authorization(n-1);
         }
     }
 }
