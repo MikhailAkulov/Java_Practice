@@ -3,27 +3,26 @@ package Home_work_4;
 public class Teams {
 
     String command_name;
-    Peoples[] players;
+    Sportsmens[] players;
 
-    public Teams(String command_name, Peoples[] players) {
+    public Teams(String command_name, Sportsmens[] players) {
         this.command_name = command_name;
         this.players = players;
-
     }
 
-    static Peoples[] players_1 = new Peoples[] { Peoples.people1, Peoples.people2, Peoples.people3 };
-    static Peoples[] players_2 = new Peoples[] { Peoples.people4, Peoples.people5, Peoples.people6 };
+    static Sportsmens[] players_1 = new Sportsmens[] { Sportsmens.people1, Sportsmens.people2, Sportsmens.people3, Sportsmens.people4 };
+    static Sportsmens[] players_2 = new Sportsmens[] { Sportsmens.people5, Sportsmens.people6, Sportsmens.people7, Sportsmens.people8 };
 
-    static Teams command_1 = new Teams("Tiger", players_1);
-    static Teams command_2 = new Teams("Wolf", players_2);
+    static Teams command_1 = new Teams("Snails", players_1);
+    static Teams command_2 = new Teams("Turtles", players_2);
 
     static void commandInformation(Teams command) {
         System.out.println("Команда: " + command.command_name);
         for (int i = 0; i < command.players.length; i++) {
             System.out.println("\tИмя: " + command.players[i].name);
-            System.out.println("\t\tНавыки пловца:\t" + command.players[i].float_skill);
-            System.out.println("\t\tНавыки бегуна:\t" + command.players[i].running_skill);
-            System.out.println("\t\tНавыки прыгуна:\t" + command.players[i].spring_skiil);
+            System.out.println("\t\tПлавание:\t" + command.players[i].swimming_skill);
+            System.out.println("\t\tБег:\t\t" + command.players[i].running_skill);
+            System.out.println("\t\tПрыжок:\t\t" + command.players[i].jumping_skill);
         }
     }
 }
