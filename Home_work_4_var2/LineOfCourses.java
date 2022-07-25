@@ -13,7 +13,6 @@ public class LineOfCourses {
         courses.add(jumping);
         System.out.println("Obstacle of courses is ready for competition");
 //        Competition(team1, team2, courses);
-
     }
 
     public void Competition(Team team1, Team team2, List<ObstacleCourse> allCourses) {
@@ -26,6 +25,5 @@ public class LineOfCourses {
             team2.InfoTeam();
 
         }
-
     }
 }
